@@ -1,0 +1,39 @@
+@import 'variables';
+
+%paleta {
+    display: flex;
+
+    .box {        
+        align-content: center;
+        border-radius: 5px;        
+        padding: 2rem 0.5rem;
+        margin: 0.2rem;        
+        color: $paleta-base-text-color;        
+    }
+
+    div[class*='darken'], div[class*='lighten'] 
+        {
+            color: $paleta-text-color;
+        }
+        
+}
+
+@mixin paleta($base-color, $variaciones) {
+    @extend %paleta;
+
+    .box {     
+        &.base-color {
+            background-color: $base-color;
+        }
+        
+        @for $i from 1 through $variaciones {
+            &.darken-#{$i} {
+                background-color: darken($base-color, $variaciones * $i * 2) ;                   
+            }
+
+            &.lighten-#{$i} {
+                background-color: lighten($base-color, $variaciones * $i * 2) ;                   
+            }
+        }        
+    }
+}

@@ -1,0 +1,17 @@
+// Base styles
+@import 'base/main';
+
+// Paleta block
+@import 'paleta/main';
+
+.container-1 {
+    @include paleta($base-color-alert, $paleta-variaciones);
+}
+
+.container-2 {
+    @include paleta($base-color-warning, $paleta-variaciones);
+}
+
+.container-3 {
+    @include paleta($base-color-sucess, $paleta-variaciones);
+}
