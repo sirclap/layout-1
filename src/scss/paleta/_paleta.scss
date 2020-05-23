@@ -1,5 +1,3 @@
-@import 'variables';
-
 %paleta {
     display: flex;
 
@@ -11,10 +9,9 @@
         color: $paleta-base-text-color;        
     }
 
-    div[class*='darken'], div[class*='lighten'] 
-        {
-            color: $paleta-text-color;
-        }
+    div[class*='darken'], div[class*='lighten'] {
+        color: $paleta-text-color;
+    }
         
 }
 
